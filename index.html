@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title>Fiddle Faddle Flop</title>
+    <link href = "style.css" rel = "stylesheet" type = "text/css" />
+  </head>
+  <body>
+    <h1>Fiddle Faddle Flop</h1>
+    <div>
+      <p id = "specifytext" class = "normaltext">Amount of digits:</p>
+      <input type = "text" id = "amountofdigits" style = "display: block"></input><br />
+      <p id = "userealnumber" class = "warningtext" style = "display: none">Please use a real number</p>
+      <p id = "usenonzeronumber" class = "warningtext" style = "display: none">Please use a nonzero number</p>
+      <p id = "uselownumber" class = "warningtext" style = "display: none">Please use a number at most 10</p>
+      <p id = "usepositivenumber" class = "warningtext" style = "display: none">Please use a positive number</p>
+      <button id = "makegame" onclick = "makegame()" style = "display: block">Make new game</button>
+    </div>
+    <div>
+      <p id = "guessspecify" class = "normaltext" style = "display: none">Your guess:</p>
+      <input type = "text" id = "guess" style = "display: none"></input>
+      <p id = "usecorrectdigits" class = "warningtext" style = "display: none">Please use 3 digits; that's what you chose</p>
+      <p id = "userealnumber2" class = "warningtext" style = "display: none">Please use a real number</p>
+      <p id = "usenonduplicateddigits" class = "warningtext" style = "display: none">Please don't use duplicate digits</p><br />
+      <button  id = "submitter" onclick = "submitguess()" style = "display: none">Submit</button><br />
+      <table id = "thetable" style = "display: none">
+        <tr>
+          <td class = "thetablecell">Guess</td>
+          <td class = "thetablecell">Output</td>
+        </tr>
+      </table>
+    </div>
+    <br /><br />
+    <div>
+      <table id = "information">
+        <tr>
+          <td>✅ means fiddle (Correct digit in correct place)</td>
+        </tr>
+        <tr>
+          <td>⛔ means faddle (Correct digit in wrong place)</td>
+        </tr>
+        <tr>
+          <td>❌ means flop (Digit doesn't exist)</td>
+        </tr>
+        <tr>
+          <td>Reload to start a new game. Duplicate tab to start a new game without losing current game.</td>
+        </tr>
+        <tr>
+          <td>Each item/emoji (✅, ⛔, ❌) in an output does not respectively correspond to each digit in its guess. They are organized so fiddles come first, then faddles, then flops.</td>
+        </tr>
+        <tr>
+          <td>The solution does not have a zero in the first digit (highest place value).</td>
+        </tr>
+      </table>
+    </div>
+    <script src = "script.js"></script>
+  </body>
+</html>
